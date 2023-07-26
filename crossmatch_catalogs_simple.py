@@ -21,7 +21,7 @@ DEC = np.array(data_my['DEC'])
 
 #######opening the catalog that has additional information
 print("Opening the catalog with additional information")
-data_add = Table.read('you_cool_ancillary_data.fits', format='fits')
+data_add = Table.read('your_cool_ancillary_data.fits', format='fits')
 df_add = data_add.to_pandas()
 df_add.info()
 print(len(data_add))
