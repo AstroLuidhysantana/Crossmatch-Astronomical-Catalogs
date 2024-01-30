@@ -6,19 +6,15 @@ import matplotlib.pyplot as plt
 import healpy as hp
 from healpy.newvisufunc import projview, newprojplot
 import time as time
-
-import os
 import glob
 import numpy as np
 import matplotlib.pyplot as plt
-import healpy as hp
 import astropy_healpix as ah
 from astropy.table import Table, QTable
 from astropy import units as u
 from astropy.io import fits
-#import pandas as pd
 from astropy.coordinates import Angle, SkyCoord
-import matplotlib.colors as mcolors
+
 
 
 ###load the catalog you want to obtain more information
@@ -33,7 +29,7 @@ ra_my = np.array(data['RA'])
 dec_my = np.array(data['DEC'])
 #TType = np.array(data['TType'])
 
-###load the general catalog you want, for instance SDSS, DES....
+###load the general catalog you want, for instance, SDSS, DES....
 def process_file(filename):
     var = Table.read(filename, format='fits')
     var.keep_columns(['RA', 'DEC'])    ###collumns you want to keep 'Z_PHOT_PEAK'
